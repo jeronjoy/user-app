@@ -3,6 +3,7 @@ package com.example.userapp;
 import android.os.Bundle;
 import android.view.PixelCopy;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -65,7 +66,7 @@ result.append("website: ").append(s4).append("\n");
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-
+                Toast.makeText(getApplicationContext(),"error occured",Toast.LENGTH_LONG).show();
             }
         }
         );
